@@ -1,0 +1,35 @@
+name: Makefile CI
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+  workflow_dispatch: {}
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    container:
+      image: pablomk7/libctrpf:0.8.0
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Build Plugin
+      run: make
+
+    # リポジトリ名に関わらず生成された .3gx / .elf を拾えるようワイルドカードにしています
+    - name: Upload Plugin
+      uses: actions/upload-artifact@v4
+      with:
+        name: Plugin 3GX File
+        path: '*.3gx'
+
+    - name: Upload Plugin ELF
+      uses: actions/upload-artifact@v4
+      with:
+        name: Plugin ELF File
+        path: '*.elf'

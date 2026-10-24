@@ -1,0 +1,16 @@
+# ビルド生成物
+/Build
+*.3gx
+*.elf
+*.o
+*.d
+
+# 他人製のバイナリ・一時ファイル
+YokaiWatch-0.5.1.3gx
+apply_technames.py
+Claude outputs/
+.DS_Store
+
+# 第三者(wiki)のコードの転載
+Assets/ARコード_真打_ASM系(未移植).txt
+*.bak*

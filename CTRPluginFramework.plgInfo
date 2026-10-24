@@ -1,0 +1,33 @@
+Author: はらだ
+
+Version: # Plugin version
+    Major: 0
+    Minor: 14
+    Revision: 0
+
+# Low TitleId (8桁hex) of games which are compatible with this plugin (0 for all)
+# 0x0012F900 = 妖怪ウォッチ2 元祖 (JP)
+# 0x0012F800 = 妖怪ウォッチ2 本家 (JP)
+# 0x00155100 = 妖怪ウォッチ2 真打 (JP)
+Targets: 0x0012F900, 0x0012F800, 0x00155100
+
+Title: Yokai Watch 2 Tools
+
+Summary: 妖怪ウォッチ2 (元祖/本家/真打) 用のCTRPFベースのツール/チートプラグイン
+
+Description: |
+  妖怪ウォッチ2シリーズ向けにカスタムしたCTRPluginFrameworkプラグインです。
+
+  Features:
+    - Memory searcher
+    - Hex Editor
+    - Code creator
+    - Code import from file
+    - Action Replay engine with extra capabilities
+    - Super fast screenshot engine
+
+Compatibility: Any
+
+MemorySize: 5MiB
+
+UsePrivateMemory: false
